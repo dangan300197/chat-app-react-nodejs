@@ -24,6 +24,9 @@ mongoose
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
+app.get("/", (req, res) => {
+  res.json("hello world");
+});
 
 const server = app.listen(process.env.PORT, () =>
   console.log(`http://localhost:${process.env.PORT}`)
